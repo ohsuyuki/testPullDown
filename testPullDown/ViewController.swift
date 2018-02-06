@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchTextField: SearchTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let contryCode:[SearchTextFieldItem] = [
+            SearchTextFieldItem("ABW", "Aruba"),
+            SearchTextFieldItem("AFG", "Afghanistan"),
+            SearchTextFieldItem("AGO", "Angola"),
+            SearchTextFieldItem("AIA", "Anguilla"),
+            SearchTextFieldItem("ALA", "Åland Islands"),
+            SearchTextFieldItem("ALB", "Albania"),
+            SearchTextFieldItem("AND", "Andorra"),
+            SearchTextFieldItem("ARE", "United Arab Emirates"),
+            SearchTextFieldItem("ARG", "Argentina"),
+            SearchTextFieldItem("ARM", "Armenia"),
+            SearchTextFieldItem("ASM", "American Samoa"),
+            SearchTextFieldItem("ATA", "Antarctica")
+        ]
+        searchTextField.filterDataSource = contryCode
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
+
 

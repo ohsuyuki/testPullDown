@@ -14,6 +14,7 @@
 		1C66BAAA2028247000E2CBD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C66BAA82028247000E2CBD0 /* LaunchScreen.storyboard */; };
 		1C66BAB52028247000E2CBD0 /* testPullDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66BAB42028247000E2CBD0 /* testPullDownTests.swift */; };
 		1C66BAC02028247000E2CBD0 /* testPullDownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66BABF2028247000E2CBD0 /* testPullDownUITests.swift */; };
+		1C66BACE202832A900E2CBD0 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66BACD202832A900E2CBD0 /* SearchTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1C66BABB2028247000E2CBD0 /* testPullDownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testPullDownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C66BABF2028247000E2CBD0 /* testPullDownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPullDownUITests.swift; sourceTree = "<group>"; };
 		1C66BAC12028247000E2CBD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C66BACD202832A900E2CBD0 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1C66BAA62028247000E2CBD0 /* Assets.xcassets */,
 				1C66BAA82028247000E2CBD0 /* LaunchScreen.storyboard */,
 				1C66BAAB2028247000E2CBD0 /* Info.plist */,
+				1C66BACD202832A900E2CBD0 /* SearchTextField.swift */,
 			);
 			path = testPullDown;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				1C66BAA22028247000E2CBD0 /* ViewController.swift in Sources */,
 				1C66BAA02028247000E2CBD0 /* AppDelegate.swift in Sources */,
+				1C66BACE202832A900E2CBD0 /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
