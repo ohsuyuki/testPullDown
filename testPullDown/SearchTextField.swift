@@ -41,10 +41,10 @@ class SearchTextField: UITextField {
     override open func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
 
-        self.addTarget(self, action: #selector(SearchTextField.textFieldDidChange), for: .editingChanged)
-        self.addTarget(self, action: #selector(SearchTextField.textFieldDidBeginEditing), for: .editingDidBegin)
-        self.addTarget(self, action: #selector(SearchTextField.textFieldDidEndEditing), for: .editingDidEnd)
-        self.addTarget(self, action: #selector(SearchTextField.textFieldDidEndEditingOnExit), for: .editingDidEndOnExit)
+        addTarget(self, action: #selector(SearchTextField.textFieldDidChange), for: .editingChanged)
+        addTarget(self, action: #selector(SearchTextField.textFieldDidBeginEditing), for: .editingDidBegin)
+        addTarget(self, action: #selector(SearchTextField.textFieldDidEndEditing), for: .editingDidEnd)
+        addTarget(self, action: #selector(SearchTextField.textFieldDidEndEditingOnExit), for: .editingDidEndOnExit)
     }
 
     override open func layoutSubviews() {
@@ -83,7 +83,7 @@ class SearchTextField: UITextField {
 
         tableView.reloadData()
 
-        let tableViewHeight = min((CGFloat(filteredResults.count) * SearchTextField.cellHeight), (UIScreen.main.bounds.size.height - frame.origin.y - frame.height), SearchTextField.cellHeight * SearchTextField.cellMaxRow)
+        let tableViewHeight = min((CGFloat(filteredResults.count) * SearchTextField.cellHeight), (UIScreen.main.bounds.size.height - frame.origin.y - frame.height), (SearchTextField.cellHeight * SearchTextField.cellMaxRow) + SearchTextField.cellHeight * 0.4)
         let textFieldPoint = convert(bounds.origin, to: nil)
         let tableViewFrame = CGRect(x: textFieldPoint.x + 2, y: textFieldPoint.y + frame.size.height, width: frame.size.width - 4, height: tableViewHeight)
 
@@ -163,7 +163,7 @@ class SearchTextField: UITextField {
 
     @objc open func textFieldDidEndEditingOnExit() {
         if let firstElement = filteredResults.first {
-            self.text = firstElement.title
+            text = firstElement.title
         }
     }
 
